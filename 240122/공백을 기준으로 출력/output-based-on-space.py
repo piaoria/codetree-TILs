@@ -3,4 +3,4 @@ str_2 = input().split()
 
 a = ''.join(str_1)
 b = ''.join(str_2)
-print(a, b, end = '')
+print(a, b, sep = '')
