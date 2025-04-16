@@ -1,6 +1,6 @@
 const fs = require("fs");
-let a = fs.readFileSync(0).toNumber().trim();
+let a = fs.readFileSync(0).toString().trim();
 
-a = a + 2
+a = Number(a) + 2
 
 console.log(a)
