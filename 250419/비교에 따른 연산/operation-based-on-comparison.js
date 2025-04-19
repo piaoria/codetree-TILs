@@ -9,7 +9,7 @@ function printTestResult (numA, numB) {
     if (numA > numB) {
         console.log(numA * numB)
     } else {
-        console.log(Math.trunc(numB / numA))
+        console.log(~~(numB / numA))
     }
 }
 
