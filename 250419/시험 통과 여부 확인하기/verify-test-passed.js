@@ -3,10 +3,10 @@ const fs = require("fs");
 const inputScore = Number(fs.readFileSync(0).toString().trim())
 
 function printExamResult(score) {
-    if (score >= 80 && score <= 100) {
+    if (score >= 80) {
         console.log("pass")
     } else {
-        console.log(`${100 - score} more score`)
+        console.log(`${80 - score} more score`)
     }
 }
 
