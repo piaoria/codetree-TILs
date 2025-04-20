@@ -9,7 +9,7 @@ function printEightTimesRepeat (word) {
         result += word
     };
 
-    console.log(result);
+    return result;
 }
 
-printEightTimesRepeat(inputWord);
+console.log(printEightTimesRepeat(inputWord));
