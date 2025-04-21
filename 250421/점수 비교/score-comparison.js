@@ -10,8 +10,4 @@ const inputScoreB = inputData[1].split(" ");
 let mathScoreB = Number(inputScoreB[0]);
 let engScoreB = Number(inputScoreB[1]);
 
-function compareHighScore(mathA, engA, mathB, engB) {
-    return (mathA > mathB) && (engA > engB) ? 1 : 0;
-};
-
-console.log(compareHighScore(mathScoreA, engScoreA, mathScoreB, engScoreB));
+console.log((mathScoreA > mathScoreB) && (engScoreA > engScoreB) ? 1 : 0);
