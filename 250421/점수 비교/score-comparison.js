@@ -11,7 +11,7 @@ let mathScoreB = Number(inputScoreB[0]);
 let engScoreB = Number(inputScoreB[1]);
 
 function compareHighScore(mathA, engA, mathB, engB) {
-    return (mathA > mathB) && (engA > engB);
+    return (mathA > mathB) && (engA > engB) ? 1 : 0;
 };
 
-console.log(Number(compareHighScore(mathScoreA, engScoreA, mathScoreB, engScoreB)))
+console.log(compareHighScore(mathScoreA, engScoreA, mathScoreB, engScoreB));
