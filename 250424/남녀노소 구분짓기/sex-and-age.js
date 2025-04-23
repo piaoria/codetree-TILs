@@ -7,17 +7,9 @@ let inputAge = inputPersonData[1];
 
 function classifyPerson(gender, age) {
     if (gender === "0") {
-        if (age >= 19) {
-            return "MAN"
-        } else {
-            return "BOY"
-        };
+        return age >= 19 ? "MAN" : "BOY"
     } else {
-        if (age >= 19) {
-            return "WOMAN"
-        } else {
-            return "GIRL"
-        };
+        return age >= 19 ? "WOMAN" : "GIRL"
     };
 };
 
