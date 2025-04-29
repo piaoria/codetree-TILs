@@ -11,11 +11,9 @@ function findThirdAndFourthSpellMatchWordList(spell,list) {
             resultArray.push(list[i]);
         };
     };
+    resultArray.push(resultArray.length);
 
     return resultArray;
 };
 
-const result = findThirdAndFourthSpellMatchWordList(inputSpell,wordList);
-
-console.log(result.join("\n"));
-console.log(result.length);
+console.log(findThirdAndFourthSpellMatchWordList(inputSpell,wordList).join("\n"));
