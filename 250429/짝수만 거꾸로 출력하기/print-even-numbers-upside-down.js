@@ -9,11 +9,11 @@ function getEvenNumberReverseArray(len,array) {
 
     for (let i = 0; i < len; i ++) {
         if (array[i] % 2 == 0) {
-            result.push(array[i]);
+            result.unshift(array[i]);
         };
     };
 
     return result;
 };
 
-console.log(getEvenNumberReverseArray(inputInt,numberList).reverse().join(" "));
+console.log(getEvenNumberReverseArray(inputInt,numberList).join(" "));
