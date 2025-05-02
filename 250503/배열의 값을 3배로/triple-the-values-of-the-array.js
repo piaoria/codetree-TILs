@@ -10,5 +10,5 @@ function makeNewMatrix(initMatrix) {
 const newMatrix = makeNewMatrix(inputMatrix);
 
 for (let i = 0; i < newMatrix.length; i ++) {
-    console.log(newMatrix[i].join(" "));
+    console.log(...newMatrix[i]);
 };
