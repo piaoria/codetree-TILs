@@ -23,6 +23,6 @@ function makeNewArray(intN) {
 
 const newArray = makeNewArray(inputNum);
 
-for (let row = 0; row < 4; row ++) {
+for (let row = 0; row < inputNum; row ++) {
     console.log(newArray[row].join(""));
 };
