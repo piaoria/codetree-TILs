@@ -4,7 +4,7 @@ const n = Number(input[0]);
 const arr = input[1].split(" ").map(Number);
 
 const findMaxValueWithRecursion = (index, value) => {
-    if (index === n - 1) return value;
+    if (index === n) return value;
 
     return Math.max(findMaxValueWithRecursion(index + 1, arr[index]) , value);
 };
