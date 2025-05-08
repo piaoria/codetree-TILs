@@ -23,4 +23,4 @@ for (let person of personLines) {
     personList.push(new Person(...person.split(" ")));
 }
 
-personList.sort(this.name)[intN - 1].printPersonInfo();
+personList.sort((prev, cur) => prev.name.localeCompare(cur.name))[intN - 1].printPersonInfo();
