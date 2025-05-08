@@ -7,10 +7,14 @@ class Bomb {
         this.color = color;
         this.second = Number(second);
     }
+
+    bombInfoPrint() {
+        console.log(`code : ${newBomb.code}`);
+        console.log(`color : ${newBomb.color}`);
+        console.log(`second : ${newBomb.second}`);
+    }
 }
 
 const newBomb = new Bomb(...inputData);
 
-console.log(`code : ${newBomb.code}`);
-console.log(`color : ${newBomb.color}`);
-console.log(`second : ${newBomb.second}`);
+newBomb.bombInfoPrint();
