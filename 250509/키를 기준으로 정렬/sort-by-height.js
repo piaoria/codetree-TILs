@@ -15,10 +15,12 @@ class Profile {
     }
 }
 
-const profileList = [];
+const profileList = inputProfileList.map((line) => {
+    const [name, height, weight] = line.split(" ");
+    
+    return new Profile(name, height, weight);
+});
 
-for (let info of inputProfileList) {
-    profileList.push(new Profile(...info.split(" ")));
-}
+profileList.sort((prev, cur) => prev.height - cur.height);
 
-profileList.sort((prev, cur) => prev.height - cur.height).forEach((cur) => cur.printProfileInfo());
+profileList.forEach((cur) => cur.printProfileInfo());
