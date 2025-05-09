@@ -6,9 +6,9 @@ const inputGradesInfo = inputData.slice(1);
 class Grade {
     constructor(name, language, english, mathematics) {
         this.name = name;
-        this.language = language;
-        this.english = english;
-        this.mathematics = mathematics;
+        this.language = Number(language);
+        this.english = Number(english);
+        this.mathematics = Number(mathematics);
     }
 
     printGradeInfo() {
@@ -23,16 +23,9 @@ const gradesList = inputGradesInfo.map((line) => {
 });
 
 const sortGradesInfo = (prev, cur) => {
-    if (prev.language === cur.language) {
-        if (prev.english === cur.english) {
-        
-            return cur.mathematics - prev.mathematics;
-        }
-
-        return cur.english - prev.english;
-    }
-
-    return cur.language - prev.language;
+    if (prev.language !== cur.language) return cur.language - prev.language;
+    if (prev.english !== cur.english) return cur.english - prev.english;
+    return cur.mathematics - prev.mathematics;
 };
 
 gradesList.sort((prev, cur) => sortGradesInfo(prev, cur));
