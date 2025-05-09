@@ -9,7 +9,7 @@ class Profile {
     }
 
     printProfileInfo() {
-        console.log(this.name, this.height, Math.trunc(this.weight * 10) / 10);
+        console.log(this.name, this.height, Math.floor(this.weight* 10) / 10);
     }
 }
 
@@ -23,12 +23,11 @@ const cmpHeight = (prev, cur) => {
     return cur.height - prev.height;
 };
 
-profileList.sort((prev, cur) => prev.name.localeCompare(cur.name));
-
+const sortedNameList = [...profileList].sort((prev, cur) => prev.name.localeCompare(cur.name));
+const sortedHeightList = [...profileList].sort((prev, cur) => cmpHeight(prev, cur));
 console.log("name");
-profileList.forEach((info) => info.printProfileInfo());
-console.log("");
+sortedNameList.forEach((info) => info.printProfileInfo());
 
-profileList.sort((prev, cur) => cmpHeight(prev, cur));
+console.log("");
 console.log("height");
-profileList.forEach((info) => info.printProfileInfo());
+sortedHeightList.forEach((info) => info.printProfileInfo());
