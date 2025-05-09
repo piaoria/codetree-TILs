@@ -23,10 +23,12 @@ const cmpHeight = (prev, cur) => {
     return cur.height - prev.height;
 };
 
-const sortedNameList = [...profileList].sort((prev, cur) => prev.name.localeCompare(cur.name));
-const sortedHeightList = [...profileList].sort((prev, cur) => cmpHeight(prev, cur));
+profileList.sort((prev, cur) => prev.name.localeCompare(cur.name));
+
 console.log("name");
-sortedNameList.forEach((info) => info.printProfileInfo());
-console.log();
+profileList.forEach((info) => info.printProfileInfo());
+console.log("");
+
+profileList.sort((prev, cur) => cmpHeight(prev, cur));
 console.log("height");
-sortedHeightList.forEach((info) => info.printProfileInfo());
+profileList.forEach((info) => info.printProfileInfo());
