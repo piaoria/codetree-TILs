@@ -9,7 +9,7 @@ class Profile {
     }
 
     printProfileInfo() {
-        console.log(this.name, this.height, Math.floor(this.weight * 10) / 10);
+        console.log(this.name, this.height, Math.trunc(this.weight * 10) / 10);
     }
 }
 
