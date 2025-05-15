@@ -19,7 +19,7 @@ const movePosition = (commandList, idx) => {
             idx += x;
 
         } else if (direct === "L") {
-            for (let j = idx; j > idx - x; j --) {
+            for (let j = idx - 1; j >= idx - x; j --) {
                 area[j] ++;
             }
             idx -= x;
@@ -32,6 +32,5 @@ const movePosition = (commandList, idx) => {
 movePosition(inputCommandData, originIndex);
 
 let count = 0;
-
 area.forEach((factor) => {if (factor >= 2) count ++});
 console.log(count);
