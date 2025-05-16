@@ -15,16 +15,16 @@ const fillColor = (cmdList) => {
         let direction = cmd[1];
 
         if (direction === "L") {
-            for (let i = position - 1; i >= position - leng; i --) {
+            for (let i = position; i >= position - leng + 1; i --) {
                 visitedColorArray[i] = "W" + visitedColorArray[i];
             }
-            position = position - leng;
+            position = position - leng + 1;
 
         } else if (direction === "R") {
-            for (let j = position; j < position + leng; j ++) {
+            for (let j = position; j <= position + leng - 1; j ++) {
                 visitedColorArray[j] = "B" + visitedColorArray[j];
             }
-            position = position + leng;
+            position = position + leng - 1;
         }
     }
 };
