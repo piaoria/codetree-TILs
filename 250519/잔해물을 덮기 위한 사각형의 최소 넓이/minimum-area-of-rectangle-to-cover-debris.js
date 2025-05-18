@@ -32,20 +32,41 @@ let maxX = aX2;
 let minY = aY1;
 let maxY = aY2;
 
-let lenX = 0;
-let lenY = 0;
+let minXIdx = 2001;
+let maxXIdx = 0;
+let minYIdx = 2001;
+let maxYIdx = 0;
 
-for (let x = minX; x < maxX; x ++) {
-    let yLength = 0;
-    for (let y = minY; y < maxY; y ++) {
+for (let x = minX; x < maxX; x++) {
+    for (let y = minY; y < maxY; y++) {
         if (grid[x][y] === 1) {
-            yLength ++;
+            minXIdx = Math.min(minXIdx, x);
+            break;
         }
     }
-    if (yLength) {
-        lenX ++;
+
+    for (let y = maxY - 1; y >= minY; y--) {
+        if (grid[x][y] === 1) {
+            maxXIdx = Math.max(maxXIdx, x);
+            break;
+        }
     }
-    lenY = Math.max(lenY, yLength);
 }
 
-console.log(lenX * lenY);
+for (let y = minY; y < maxY; y++) {
+    for (let x = minX; x < maxX; x++) {
+        if (grid[x][y] === 1) {
+            minYIdx = Math.min(minYIdx, y);
+            break;
+        }
+    }
+
+    for (let x = maxX - 1; x >= minX; x--) {
+        if (grid[x][y] === 1) {
+            maxYIdx = Math.max(maxYIdx, y);
+            break;
+        }
+    }
+}
+
+console.log((maxXIdx - minXIdx + 1) * (maxYIdx - minYIdx + 1));
