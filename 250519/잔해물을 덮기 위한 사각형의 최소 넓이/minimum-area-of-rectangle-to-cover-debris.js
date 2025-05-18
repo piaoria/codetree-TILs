@@ -69,4 +69,8 @@ for (let y = minY; y < maxY; y++) {
     }
 }
 
-console.log((maxXIdx - minXIdx + 1) * (maxYIdx - minYIdx + 1));
+if (minXIdx > maxXIdx || minYIdx > maxYIdx) {
+    console.log(0);
+} else {
+    console.log((maxXIdx - minXIdx + 1) * (maxYIdx - minYIdx + 1));
+}
