@@ -12,6 +12,11 @@ let prevNum = inputNumberList[0];
 for (let curIdx = 1; curIdx < intN; curIdx ++) {
     if (prevNum === inputNumberList[curIdx]) {
         repeatCnt ++;
+        if (curIdx === intN - 1) {
+            maxCnt = Math.max(maxCnt, repeatCnt);
+            break;
+        }
+
     } else if (prevNum !== inputNumberList[curIdx]) {
         maxCnt = Math.max(maxCnt, repeatCnt);
         prevNum = inputNumberList[curIdx];
