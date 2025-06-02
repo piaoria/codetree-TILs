@@ -6,17 +6,21 @@ const inputNumberList = inputData.slice(1).map(Number);
 
 let maxCnt = 1;
 let cnt = 1;
-let pastNum = 0;
+let pastNum = inputNumberList[0];
 
-for (let num of inputNumberList) {
-    if (pastNum < num) {
+for (let idx = 1; idx < intN; idx ++) {
+    if (pastNum < inputNumberList[idx]) {
         cnt ++;
-        pastNum = num;
+        pastNum = inputNumberList[idx];
+
+        if (idx === intN - 1) {
+            maxCnt = Math.max(maxCnt, cnt);
+        }
 
     } else {
         maxCnt = Math.max(maxCnt, cnt);
         cnt = 1;
-        pastNum = num;
+        pastNum = inputNumberList[idx];
 
     }
 }
