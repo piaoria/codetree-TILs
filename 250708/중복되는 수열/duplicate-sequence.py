@@ -29,7 +29,7 @@ class Trie:
 
 result = True
 trie = Trie()
-
+array_list.sort()
 for nm in array_list:
     if trie.insert(nm):
         result = False
