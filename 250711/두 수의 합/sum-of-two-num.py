@@ -8,7 +8,7 @@ num_list = list(map(int, input().split()))
 counter = Counter(num_list)
 
 result = 0
-for num in counter:
+for num in num_list:
     diff = k - num
 
     if diff == num:
