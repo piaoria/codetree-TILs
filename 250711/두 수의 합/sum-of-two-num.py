@@ -10,6 +10,10 @@ counter = Counter(num_list)
 result = 0
 for num in counter:
     diff = k - num
-    result += counter[diff]
+
+    if diff == num:
+        result += counter[diff] - 1
+    else:
+        result += counter[diff]
 
 print(result // 2)
