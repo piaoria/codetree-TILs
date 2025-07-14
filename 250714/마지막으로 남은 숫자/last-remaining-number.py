@@ -19,10 +19,11 @@ while True:
         if a == b:
             continue
         else:
-            heapq.heappush(pq, -abs(a - b))
+            diff = abs(a - b)
+            heapq.heappush(pq, -diff)
 
     elif len(pq) == 1:
-        print(pq[0])
+        print(-pq[0])
         break
 
     else:
