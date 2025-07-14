@@ -14,10 +14,12 @@ while True:
     if len(pq) >= 2:
         a = heapq.heappop(pq)
         b = heapq.heappop(pq)
+
+        a, b = -a, -b
         if a == b:
             continue
         else:
-            heapq.heappush(pq, abs(a - b))
+            heapq.heappush(pq, -abs(a - b))
 
     elif len(pq) == 1:
         print(pq[0])
