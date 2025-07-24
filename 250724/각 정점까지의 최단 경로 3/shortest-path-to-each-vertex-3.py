@@ -43,7 +43,7 @@ while pq:
 
 for i in range(2, n + 1):
     value = dist[i]
-    if value == 0:
+    if value == INT_MAX:
         print(-1)
     else:
         print(value)
