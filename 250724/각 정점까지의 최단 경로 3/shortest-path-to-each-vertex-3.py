@@ -42,4 +42,8 @@ while pq:
             heapq.heappush(pq, (dist[next_node], next_node))
 
 for i in range(2, n + 1):
-    print(dist[i])
+    value = dist[i]
+    if value == 0:
+        print(-1)
+    else:
+        print(value)
